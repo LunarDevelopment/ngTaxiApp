@@ -1,0 +1,77 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <!-- CONTENT -->
+  <ion-side-menu-content>
+
+    <!-- header bar -->
+    <!-- the nav bar will be updated as we navigate between views -->
+    <ion-nav-bar class="bar-dark">
+      <!-- back button, shown if applicable -->
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <!-- nav button, shown if applicable -->
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- ROUTING INJECTED HERE: pageContent -->
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <!-- SIDEMENU -->
+  <ion-side-menu side="left" class="dark-bg dark-border">
+
+    <!-- menu header -->
+    <ion-header-bar class="bar-dark">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+
+    <!-- menu content -->
+    <ion-content>
+      <ion-list>
+        <ion-item class="item item-thumbnail-left" nav-clear menu-close ui-sref="app.settings">
+          <img src="{{menu.user.smallAvatarUrl}}">
+          <h2>{{menu.user.username}}</h2>
+          <p>{{menu.user.email}}</p>
+        </ion-item>
+
+        
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ui-sref="app.main">
+          <i class="icon ion-home"></i>
+          Dashboard
+        </ion-item>
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ui-sref="app.marketplace">
+          <i class="icon ion-bag"></i>
+          Marketplace
+        </ion-item>
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ui-sref="app.myJobs">
+          <i class="icon ion-calendar"></i>
+          My Jobs
+        </ion-item>
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ui-sref="app.about">
+          <i class="icon ion-information-circled"></i>
+          About
+        </ion-item>
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ui-sref="app.feedback">
+          <i class="icon ion-chatbox-working"></i>
+          Feedback
+        </ion-item>
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ui-sref="app.settings">
+          <i class="icon ion-gear-a"></i>
+          Settings
+        </ion-item>
+        <ion-item class="item item-dark item-icon-right" nav-clear menu-close ui-sref-active="active" ng-click="logout()">
+          <i class="icon ion-log-out"></i>
+          Log Out
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-side-menu>
+
+</ion-side-menus>
+
+

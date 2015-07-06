@@ -1,0 +1,34 @@
+<ion-view view-title="Job Details">
+  <!-- do you want padding? -->
+  <ion-content class="padding">
+
+    <!-- content goes here -->
+    <div class="card">
+      <div class="item item-divider">
+        Job ID : {{details.selectedJob.Client_id || "Unknown"}}
+      </div>
+      <div class="item item-text-wrap">
+        
+          <p class="assertive">From: </p>
+          <p>{{details.selectedJob.Client_Pickup_Address | uppercase}}</p>
+          <p class="positive">{{details.selectedJob.Client_Pickup_Postcode | uppercase}}</p>
+          <hr>
+        <p class="assertive">To: </p>
+        <p>{{details.selectedJob.Client_Dropoff_Address | uppercase}}</p>
+        <p class="balanced">{{details.selectedJob.Client_Dropoff_Postcode | uppercase}}</p>
+        
+      <hr>
+        <p>{{details.selectedJob.Client_Name | uppercase}}</p>
+        <p>{{details.selectedJob.Client_Pickup_Time | date:'medium'}}</p>
+        
+      </div>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-assertive">
+    <h1 class="title">Action!</h1>
+    <div class="buttons" ng-click="details.takeJob()">
+      <button class="button button-positive">Take Job</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

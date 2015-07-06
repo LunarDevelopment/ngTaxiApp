@@ -1,0 +1,52 @@
+<ion-view title="Marketplace">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="marketplace.doRefresh()">
+    </ion-refresher>
+
+    <ion-list can-swipe="true">
+      <ion-item class="" ng-click="marketplace.viewJob(job);" collection-repeat="job in marketplace.availableJobs | orderBy:'Client_Pickup_Time':true">
+        <div class="row">
+          <div class="col col-10">
+            <small class="assertive">From: </small>
+          </div>
+          <div class="col">
+            <h2>{{job.Client_Pickup_Address | uppercase}}</h2>
+          </div>
+          <div class="col col-20">
+            <small class="positive">{{job.Client_Pickup_Postcode | uppercase}}</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-10">
+            <small class="assertive">To: </small>
+          </div>
+          <div class="col">
+            <h2>{{job.Client_Dropoff_Address | uppercase}}</h2>
+          </div>
+          <div class="col col-20">
+            <small class="balanced">{{job.Client_Dropoff_Postcode | uppercase}}</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>{{job.Client_Name | uppercase}}</p>
+          </div>
+          <div class="col">
+            <p>{{job.Client_Pickup_Time | date:'medium'}}</p>
+          </div>
+        </div>
+        <ion-option-button class="button-assertive"
+                           ng-click="takeJob(job)">
+          Take
+        </ion-option-button>
+        <ion-option-button class="button-positive"
+                           ng-click="watchJob(job)">
+          Watch
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

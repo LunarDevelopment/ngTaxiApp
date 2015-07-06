@@ -1,0 +1,58 @@
+<ion-view view-title="My Jobs">
+  <!-- do you want padding? -->
+  <ion-content class="padding">
+
+    <!-- content goes here -->
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="jobs.doRefresh()">
+    </ion-refresher>
+
+    <ion-list can-swipe="true">
+      <ion-item class="" ng-click="jobs.viewJob(job);" collection-repeat="job in jobs.myJobs | orderBy:'Client_Pickup_Time':true">
+        <div class="row">
+          <div class="col col-10">
+            <small class="assertive">From: </small>
+          </div>
+          <div class="col">
+            <h2>{{job.Client_Pickup_Address | uppercase}}</h2>
+          </div>
+          <div class="col col-20">
+            <small class="positive">{{job.Client_Pickup_Postcode | uppercase}}</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-10">
+            <small class="assertive">To: </small>
+          </div>
+          <div class="col">
+            <h2>{{job.Client_Dropoff_Address | uppercase}}</h2>
+          </div>
+          <div class="col col-20">
+            <small class="balanced">{{job.Client_Dropoff_Postcode | uppercase}}</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>{{job.Client_Name | uppercase}}</p>
+          </div>
+          <div class="col">
+            <p>{{job.Client_Pickup_Time | date:'medium'}}</p>
+          </div>
+        </div>
+        <ion-option-button class="button-assertive"
+                           ng-click="takeJob(job)">
+        Unassign
+        </ion-option-button>
+        <ion-option-button class="button-positive"
+                           ng-click="watchJob(job)">
+        Un-Watch
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-assertive">
+    <div class="buttons" ng-click="jobs.abandonAll()">
+      <button class="button button-positive">Unnasign</button>
+    </div>
+    <h1 class="title">Abandon all jobs?</h1>
+  </ion-footer-bar>
+</ion-view>

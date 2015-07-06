@@ -1,0 +1,47 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <div class="list card">
+      <div class="item item-avatar">
+        <img ng-src="{{start.user.smallAvatarUrl}}">
+        <h2>{{start.user.username}}</h2>
+        <p>{{start.user.email}}</p>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          Email: {{start.user.email}}
+        </p>
+        <p>
+          Tel: {{start.user.contactNumber}}
+        </p>
+        <p>
+         Car: {{start.user.carDescription}}
+        </p>
+        <p>
+          Reg: {{start.user.carReg}}
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-model-s positive"></i>
+          {{start.user.completedJobs}}
+          Completed Jobs
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-star energized"></i>
+          {{start.user.driverRating}}
+          Driver Score
+        </a>
+      </div>
+
+    </div>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-positive">
+    
+    <h1 class="title">Jobs Waiting {{start.jobsWaiting || 0}}</h1>
+    <div class="buttons" ui-sref="app.myJobs">
+      <button class="button">View</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

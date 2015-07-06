@@ -1,0 +1,29 @@
+<ion-view view-title="Feedback">
+  <!-- do you want padding? -->
+  <ion-content class="padding">
+
+        
+    <div class="card">
+      <div class="item item-divider">
+          We want to hear your suggestions for improving this app!
+      </div>
+      <div class="item item-text-wrap">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Title</span>
+          <input type="text" placeholder="Title">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Comments</span>
+          <textarea class="feedbackTextbox" placeholder="Comments"></textarea>
+        </label>
+
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-positive">
+    <h1 class="title">Action!</h1>
+    <div class="buttons" ng-click="details.takeJob()">
+      <button class="button button-positive">Send</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
