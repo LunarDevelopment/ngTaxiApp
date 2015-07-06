@@ -25,6 +25,25 @@
           <span class="input-label">Email Address</span>
           <input type="email" ng-model="settings.user.email" placeholder="Email Address">
         </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Telephone</span>
+          <input type="tel" ng-model="settings.user.contactNumber" placeholder="Telephone">
+        </label>
+      </div>
+    </div>
+   <div class="card">
+      <div class="item item-divider">
+        Vehicle Details
+      </div>
+      <div class="item item-text-wrap">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Car Description</span>
+          <textarea class="" ng-model="settings.user.carDescription" placeholder="Car Description"></textarea>
+        </label>
+         <label class="item item-input item-floating-label">
+          <span class="input-label">Car Registration</span>
+           <input type="text" ng-model="settings.user.carReg" placeholder="Car Registration">
+        </label>
       </div>
     </div>
     <div class="item item-divider">
@@ -36,11 +55,11 @@
         Order Marketplace Jobs By:
       </div>
       <div class="item item-text-wrap">
-        <ion-radio ng-model="choice" ng-value="'A'">Date Newest</ion-radio>
-        <ion-radio ng-model="choice" ng-value="'A'">Date Oldest</ion-radio>
-        <ion-radio ng-model="choice" ng-value="'B'">Location Closest</ion-radio>
-        <ion-radio ng-model="choice" ng-value="'C'">A to B Distance Shortest</ion-radio>
-        <ion-radio ng-model="choice" ng-value="'C'">A to B Distance Longest</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'Newest'">Date Newest</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'Oldest'">Date Oldest</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'Closest'">Location Closest</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'Longest'">A to B Distance Longest</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'Shortest'">A to B Distance Shortest</ion-radio>
       </div>
     </div>
     
