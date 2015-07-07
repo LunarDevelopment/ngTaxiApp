@@ -24,7 +24,12 @@
 - fix "back button" issue when navigating around marketplace
 - link user / settings to the rest of app 
 - header search bar for my jobs and marketplace 
-
+- functions: 
+    * ~~takeJob~~
+    * watchJob
+- stying for watched jobs in My Jobs
+- time till pickup filter 
+- remove back arrow everywhere except job details.. 
 
 ## App File Lists
 
