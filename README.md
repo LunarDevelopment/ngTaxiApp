@@ -1,14 +1,14 @@
 
 #### To-Do 
-- Scaffold App Files (see App File Lists)
-- Link files through State Provider
-- Style side nav
-- create services files 
-- link up services 
-- hard code api data to app
-    * User
-    * Market 
-    * Jobs List
+- ~~Scaffold App Files (see App File Lists)~~
+- ~~Link files through State Provider~~
+- ~~Style side nav~~
+- ~~create services files~~
+- ~~link up services~~
+- ~~hard code api data to app~~
+* ~~User~~
+    * ~~Market~~ 
+    * ~~Jobs List~~
 - Link App with API 
     * User
     * Market 
@@ -22,7 +22,7 @@
     * situate code in factory
 - Remove excess files 
 - fix "back button" issue when navigating around marketplace
-- link user / settings to the rest of app 
+- ~~link user / settings to the rest of app~~ 
 - header search bar for my jobs and marketplace 
 - functions: 
     * ~~takeJob~~
